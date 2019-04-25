@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2019 by anonymous (http://js.jirengu.com/pewaretaxe/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+body{
+  background:#444;
+}
+#yinyang{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  position:relative;
+  margin:100px auto 20px;
+  background: linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#000000 50%,#000000 100%);
+  animation-duration: 3s;
+  animation-name: spin;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+#yinyang::before{
+  content:'';
+  width:20px;
+  height:20px;
+  border:40px solid #000;
+  border-radius:50%;
+  background:#fff;
+  position:absolute;
+  top:50px;
+  left:0px;
+  
+}
+#yinyang::after{
+  content:'';
+  width:20px;
+  height:20px;
+  border:40px solid #fff;
+  border-radius:50%;
+  background:#000;
+  position:absolute;
+  top:50px;
+  right:0px;
+  
+}
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+
+  to {
+    transform:rotate(360deg);
+  }
+}
+p{
+  color:#fff;
+  text-align:center;
+}
+</style>
+</head>
+<body>
+<div id=yinyang>
+  </div>
+  <p>道生一，一生二，二生三，三生万物</p>
+</body>
+</html>
